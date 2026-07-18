@@ -1,0 +1,26 @@
+{
+  "name": "컴활 2급 필기 기출문제 풀이",
+  "short_name": "컴활2급",
+  "description": "컴퓨터활용능력 2급 필기 기출문제를 한 문제씩 풀어보는 학습 앱",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f6fb",
+  "theme_color": "#2f6feb",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

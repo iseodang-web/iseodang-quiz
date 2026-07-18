@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>컴활 2급 필기 기출문제 풀이</title>
+<meta name="theme-color" content="#2f6feb" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="icon.svg" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="컴활2급" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app">
+
+  <header class="topbar">
+    <h1>컴활 2급 필기</h1>
+    <div id="timer" class="timer">40:00</div>
+  </header>
+
+  <main id="screen-home" class="screen">
+    <div class="card">
+      <h2>기출문제 풀이</h2>
+      <p class="muted">총 <span id="home-total">0</span>문항 · 제한시간 40분</p>
+      <div id="home-progress" class="home-progress"></div>
+      <button id="btn-start" class="btn primary">학습 시작</button>
+      <button id="btn-continue" class="btn" hidden>이어서 풀기</button>
+      <button id="btn-reset" class="btn danger">기록 초기화</button>
+    </div>
+  </main>
+
+  <main id="screen-quiz" class="screen" hidden>
+    <div class="quiz-meta">
+      <span id="q-index">1</span> / <span id="q-total">30</span>
+      <span id="q-subject" class="badge"></span>
+      <span class="quiz-stats">정답 <b id="q-correct">0</b> · 오답 <b id="q-wrong">0</b></span>
+    </div>
+
+    <div class="card question-card">
+      <p id="q-text" class="question-text"></p>
+      <ul id="q-options" class="options"></ul>
+    </div>
+
+    <div id="q-feedback" class="feedback" hidden>
+      <p id="feedback-text"></p>
+      <p id="feedback-explain" class="muted"></p>
+    </div>
+
+    <div class="actions">
+      <button id="btn-check" class="btn primary">정답 확인</button>
+      <button id="btn-next" class="btn primary" hidden>다음 문제</button>
+      <button id="btn-retry" class="btn" hidden>다시 풀기</button>
+    </div>
+  </main>
+
+  <main id="screen-done" class="screen" hidden>
+    <div class="card">
+      <h2>학습 완료!</h2>
+      <p id="done-summary" class="muted"></p>
+      <button id="btn-restart" class="btn primary">처음부터 다시 풀기</button>
+    </div>
+  </main>
+
+  <main id="screen-timeup" class="screen" hidden>
+    <div class="card">
+      <h2>시간 종료</h2>
+      <p class="muted">제한 시간 40분이 모두 지났습니다.</p>
+      <p id="timeup-summary" class="muted"></p>
+      <button id="btn-timeup-restart" class="btn primary">타이머 재시작하고 계속 풀기</button>
+    </div>
+  </main>
+
+</div>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
